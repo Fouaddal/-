@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar System Impact</title>
     <style>
-      body { margin: 0; background-color: #000; overflow: hidden; }
-     
+        body { 
+            margin: 0; 
+            overflow: hidden; /* Prevent scrollbars */
+            background-color: #000;
+        }
+        #ui-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100; /* Ensure it's on top of the canvas */
+        }
+        #impactButton {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: white;
+            background-color: #c9302c; /* A dramatic red */
+            border: 1px solid #7a1c1a;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        #impactButton:hover {
+            background-color: #a92824;
+        }
+        #impactButton:active {
+            transform: scale(0.98);
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+    
+    <div id="ui-container">
+        <button id="impactButton">Trigger Asteroid Impact</button>
+    </div>
+
     <script type="module" src="/main.js"></script>
-  </body>
+
+</body>
 </html>
